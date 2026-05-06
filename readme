@@ -1,0 +1,12 @@
+01.  Arquivo server.json serve 
+para guardar os dados que serão 
+enviados para a API
+
+02. A flag --watch é para a atualização ser em tempo
+real para que eu não precise reeniciar o 
+comando toda vez que 
+alterar/adicionar algo, 
+essa flag ficará "de olho"
+
+03. Para testarmos se realmente está funcionando
+a API, vamos colocar algum dado dentro do schedules 
