@@ -10,3 +10,9 @@ essa flag ficará "de olho"
 
 03. Para testarmos se realmente está funcionando
 a API, vamos colocar algum dado dentro do schedules 
+
+04. Configuração no package.json para setar o autor, nome do projeto e descrição
+
+05. Instalação do pacote webpack e sua inicialização via script
+
+06. A saida do arquivo com webpack é objeto (Leia a documentação)
