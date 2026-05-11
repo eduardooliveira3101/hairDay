@@ -8,6 +8,6 @@ import "./styles/schedule.css";
 //Importando a lib de data e hora
 import "./libs/dayjs";
 
-import dayjs from "dayjs";
-
-console.log(dayjs().format("HH:mm"));
+//Importando modulos
+import "./modules/form/submit.js";
+import "./modules/load.js";
