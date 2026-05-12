@@ -11,3 +11,4 @@ import "./libs/dayjs";
 //Importando modulos
 import "./modules/form/submit.js";
 import "./modules/page-load.js";
+import "./modules/form/date-change.js";

@@ -1,5 +1,6 @@
 //Importando o formulário
 const form = document.querySelector("form");
+const clientName = document.querySelector("#client");
 
 //Importando o input calendário
 const selectedDate = document.querySelector("#date");
@@ -18,4 +19,32 @@ selectedDate.min = inputToday;
 
 form.onsubmit = (event) => {
   event.preventDefault();
+  try {
+    //Recuperando o nome do cliente
+    const name = clientName.value.trim();
+    if (!name) {
+      return alert("Por favor, informe o nome do cliente");
+    }
+    //Recuperar o horário selecionado
+    const hourSelected = document.querySelector(".hour-selected");
+
+    //Recuperando o horário selecionado
+    if (!hourSelected) {
+      alert("Selecione a hora");
+    }
+
+    const [hour] = hourSelected.innerText.split(":");
+    const when = dayjs(selectedDate.value).add(hour, "hour");
+
+    const id = new Date().getTime();
+
+    console.log({
+      id,
+      name,
+      when,
+    });
+  } catch (error) {
+    console.log(error);
+    alert("Não foi possível realizar o agendamento");
+  }
 };
