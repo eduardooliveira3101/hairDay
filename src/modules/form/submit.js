@@ -2,6 +2,8 @@
 const form = document.querySelector("form");
 const clientName = document.querySelector("#client");
 
+import { schedulesNew } from "../../services/schedules-new.js";
+
 //Importando o input calendário
 const selectedDate = document.querySelector("#date");
 
@@ -17,7 +19,7 @@ selectedDate.value = inputToday;
 //Selecionando o input de calendário e setando que, no minimo o agendamento é de hoje para frente
 selectedDate.min = inputToday;
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
   event.preventDefault();
   try {
     //Recuperando o nome do cliente
@@ -38,7 +40,7 @@ form.onsubmit = (event) => {
 
     const id = new Date().getTime();
 
-    console.log({
+    await schedulesNew({
       id,
       name,
       when,

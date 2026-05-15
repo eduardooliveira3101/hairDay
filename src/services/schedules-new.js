@@ -5,7 +5,7 @@ import { apiConfig } from "./api-config.js";
 export async function schedulesNew({ id, name, when }) {
   try {
     //Fazendo uma requisição para api
-    await fetch(`${apiConfig}/schedules`, {
+    await fetch(`${apiConfig.baseURL}/schedules`, {
       //Setando o método sendo 'POST' o de criação
       method: "POST",
       //Adicionando informações ao cabeçalho

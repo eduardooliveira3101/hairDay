@@ -3,7 +3,7 @@
   "description": "Aplicação para gerenciar os horarios do salão",
   "author": "Carlos Eduardo",
   "scripts": {
-    "api": "json-server --watch server.json testing.json --port 3333",
+    "api": "json-server --watch server.json --port 3000",
     "webpack": "webpack",
     "server": "webpack server"
   },
